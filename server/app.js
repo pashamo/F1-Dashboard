@@ -2,10 +2,21 @@
 
 const path = require('path')
 const AutoLoad = require('fastify-autoload')
+const { ApolloServer } = require('apollo-server-fastify');
+const { typeDefs, resolvers } = require('./schema/schema');
 
 module.exports = async function (fastify, opts) {
   // Place here your custom code!
-  fastify.listen(4000);
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers
+  });
+  const start = async () => {
+    fastify.register(server.createHandler());
+    await fastify.listen(4000);
+  };
+  start();
+  
   // Do not touch the following lines
 
   // This loads all plugins defined in plugins

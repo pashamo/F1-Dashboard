@@ -60,3 +60,7 @@ profile*
 # generated code
 */**/*.js
 dist
+
+
+# config files
+config.js

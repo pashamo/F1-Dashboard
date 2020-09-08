@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-fastify": "^2.17.0",
+    "apollo-server-fastify": "^3.0.0-alpha.3",
     "aws-sdk": "^2.747.0",
     "fastify": "^3.0.0",
     "fastify-autoload": "^3.0.2",
