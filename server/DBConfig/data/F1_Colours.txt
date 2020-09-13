@@ -1,0 +1,30 @@
+case "Alfa Romeo":
+          setOptions({colors:["960000"]});
+          break;
+        case "AlphaTauri":
+          setOptions({colors:["#ffffff"]});
+          break;
+        case "Ferrari":
+          setOptions({colors:["DC0000"]});
+          break;
+        case "Haas F1":
+          setOptions({colors:["#787878"]});
+          break;
+        case "McLaren":
+          setOptions({colors:["#FF8700"]});
+          break;
+        case "Mercedes":
+          setOptions({colors:["#00D2BE"]});
+          break;
+        case "Racing Point":
+          setOptions({colors:["F596C8"]});
+          break;
+        case "Red Bull":
+          setOptions({colors:["#0600ef"]});
+          break;
+        case "Renault":
+          setOptions({colors:["#FFF500"]});
+          break;
+        case "Williams":
+          setOptions({colors:["#0082fa"]});
+          break;

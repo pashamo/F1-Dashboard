@@ -6,7 +6,7 @@ AWS.config.update({
   accessKeyId: configDDB.accessKeyId,
   secretAccessKey: configDDB.secretAccessKey,
   region: configDDB.region,
-  endpoint: configDDB.endpoint_prod
+  //endpoint: configDDB.endpoint_prod
 });
 
 const docClient = new AWS.DynamoDB.DocumentClient();

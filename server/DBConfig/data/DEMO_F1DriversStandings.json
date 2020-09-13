@@ -1,0 +1,542 @@
+[
+  {
+    "driver": "Lewis Hamilton",
+    "f1constructor": "Mercedes",
+    "position": 0,
+    "points": [
+      12,
+      25,
+      26,
+      25,
+      19,
+      25,
+      25,
+      7,
+      26
+    ],
+    "pointsCumulative": [
+      12,
+      37,
+      63,
+      88,
+      107,
+      132,
+      157,
+      164,
+      190
+    ]
+  },
+  {
+    "driver": "Valtteri Bottas",
+    "f1constructor": "Mercedes",
+    "position": 0,
+    "points": [
+      25,
+      18,
+      15,
+      0,
+      15,
+      16,
+      18,
+      10,
+      18
+    ],
+    "pointsCumulative": [
+      25,
+      43,
+      58,
+      58,
+      73,
+      89,
+      107,
+      117,
+      135
+    ]
+  },
+  {
+    "driver": "Max Verstappen",
+    "f1constructor": "Red Bull",
+    "position": 0,
+    "points": [
+      0,
+      15,
+      18,
+      19,
+      25,
+      18,
+      15,
+      0,
+      0
+    ],
+    "pointsCumulative": [
+      0,
+      15,
+      33,
+      52,
+      77,
+      95,
+      110,
+      110,
+      110
+    ]
+  },
+  {
+    "driver": "Alex Albon",
+    "f1constructor": "Reb Bull",
+    "position": 0,
+    "points": [
+      0,
+      12,
+      10,
+      4,
+      10,
+      4,
+      8,
+      0,
+      15
+    ],
+    "pointsCumulative": [
+      0,
+      12,
+      22,
+      26,
+      36,
+      40,
+      48,
+      48,
+      63
+    ]
+  },
+  {
+    "driver": "Sebastian Vettel",
+    "f1constructor": "Ferrari",
+    "position": 0,
+    "points": [
+      1,
+      0,
+      8,
+      1,
+      0,
+      6,
+      0,
+      0,
+      1
+    ],
+    "pointsCumulative": [
+      1,
+      1,
+      9,
+      10,
+      10,
+      16,
+      16,
+      16,
+      17
+    ]
+  },
+  {
+    "driver": "Charles Leclerc",
+    "f1constructor": "Ferrari",
+    "position": 0,
+    "points": [
+      18,
+      0,
+      0,
+      15,
+      12,
+      0,
+      0,
+      0,
+      4
+    ],
+    "pointsCumulative": [
+      18,
+      18,
+      18,
+      33,
+      45,
+      45,
+      45,
+      45,
+      49
+    ]
+  },
+  {
+    "driver": "Carlos Sainz",
+    "f1constructor": "McLaren",
+    "position": 0,
+    "points": [
+      10,
+      3,
+      2,
+      0,
+      0,
+      8,
+      0,
+      18,
+      0
+    ],
+    "pointsCumulative": [
+      10,
+      13,
+      15,
+      15,
+      15,
+      23,
+      23,
+      41,
+      41
+    ]
+  },
+  {
+    "driver": "Lando Norris",
+    "f1constructor": "McLaren",
+    "position": 0,
+    "points": [
+      16,
+      10,
+      0,
+      10,
+      2,
+      1,
+      6,
+      12,
+      8
+    ],
+    "pointsCumulative": [
+      16,
+      26,
+      26,
+      36,
+      38,
+      39,
+      45,
+      57,
+      65
+    ]
+  },
+  {
+    "driver": "Daniel Ricciardo",
+    "f1constructor": "Renault",
+    "position": 0,
+    "points": [
+      0,
+      4,
+      4,
+      12,
+      0,
+      0,
+      13,
+      8,
+      12
+    ],
+    "pointsCumulative": [
+      0,
+      4,
+      8,
+      20,
+      20,
+      20,
+      33,
+      41,
+      53
+    ]
+  },
+  {
+    "driver": "Esteban Ocon",
+    "f1constructor": "Renault",
+    "position": 0,
+    "points": [
+      4,
+      0,
+      0,
+      8,
+      4,
+      0,
+      10,
+      4,
+      0
+    ],
+    "pointsCumulative": [
+      4,
+      4,
+      4,
+      12,
+      16,
+      16,
+      26,
+      30,
+      30
+    ]
+  },
+  {
+    "driver": "Sergio Perez",
+    "f1constructor": "Racing Point",
+    "position": 0,
+    "points": [
+      8,
+      8,
+      6,
+      0,
+      0,
+      10,
+      1,
+      1,
+      10
+    ],
+    "pointsCumulative": [
+      8,
+      16,
+      22,
+      22,
+      22,
+      32,
+      33,
+      34,
+      44
+    ]
+  },
+  {
+    "driver": "Lance Stroll",
+    "f1constructor": "Racing Point",
+    "position": 0,
+    "points": [
+      0,
+      6,
+      12,
+      2,
+      8,
+      12,
+      2,
+      15,
+      0
+    ],
+    "pointsCumulative": [
+      0,
+      6,
+      18,
+      20,
+      28,
+      40,
+      42,
+      57,
+      57
+    ]
+  },
+  {
+    "driver": "Romain Grosjean",
+    "f1constructor": "Haas F1",
+    "position": 0,
+    "points": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pointsCumulative": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "driver": "Kevin Magnussen",
+    "f1constructor": "Haas F1",
+    "position": 0,
+    "points": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pointsCumulative": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "driver": "Kimi Raikkonen",
+    "f1constructor": "Alfa Romeo",
+    "position": 0,
+    "points": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "pointsCumulative": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  {
+    "driver": "Antonio Giovinazzi",
+    "f1constructor": "Alfa Romeo",
+    "position": 0,
+    "points": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pointsCumulative": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "driver": "Pierre Gasly",
+    "f1constructor": "AlphaTauri",
+    "position": 0,
+    "points": [
+      6,
+      0,
+      0,
+      6,
+      0,
+      2,
+      4,
+      25,
+      0
+    ],
+    "pointsCumulative": [
+      6,
+      6,
+      6,
+      12,
+      12,
+      14,
+      18,
+      43,
+      43
+    ]
+  },
+  {
+    "driver": "Daniil Kvyat",
+    "f1constructor": "AlphaTauri",
+    "position": 0,
+    "points": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      6
+    ],
+    "pointsCumulative": [
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      4,
+      10
+    ]
+  },
+  {
+    "driver": "George Russell",
+    "f1constructor": "Williams",
+    "position": 0,
+    "points": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pointsCumulative": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "driver": "Nicholas Latifi",
+    "f1constructor": "Williams",
+    "position": 0,
+    "points": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pointsCumulative": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]
