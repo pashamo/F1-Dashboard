@@ -7,6 +7,7 @@ import ApexChartTest from '../components/ApexChartTest';
 const CommentSection = dynamic(() => import('../components/CommentSection'), {ssr:false});
 
 const client = createClient({
+  //url: "https://eapug4mq63.execute-api.us-east-2.amazonaws.com/dev/graphql"
   url: "http://localhost:4000/graphql"
 });
 

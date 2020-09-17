@@ -18,13 +18,16 @@ const DeleteComment = (props) => {
 
   const deleteCommentHandler = (e) => {
     e.preventDefault();
-    let name = {id: e.target.getAttribute('name')};
-    deleteComment(name).then(result => {
-      console.log(result);
-      if (result.error) {
-        console.error('Oh no!', result.error);
-      }
-    });
+    if(props.dbFlag) {
+      let name = {id: e.target.getAttribute('name')};
+      deleteComment(name).then(result => {
+        console.log(result);
+        if (result.error) {
+          console.error('Oh no!', result.error);
+        }
+      });
+    }
+    
   };
 
 
