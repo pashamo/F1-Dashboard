@@ -1,42 +1,18 @@
-const { gql } = require('apollo-server-fastify');
-const AWS = require('aws-sdk');
-const configDDB = require('../config');
+import AWS from 'aws-sdk';
+const configDDB = require('./config');
 
-AWS.config.update({
-  accessKeyId: configDDB.accessKeyId,
-  secretAccessKey: configDDB.secretAccessKey,
-  region: configDDB.region,
-  //endpoint: configDDB.endpoint_prod
-});
+configDDB();
+
+// AWS.config.update({
+//   accessKeyId: configDDB.accessKeyId,
+//   secretAccessKey: configDDB.secretAccessKey,
+//   region: configDDB.region,
+//   endpoint: configDDB.endpoint_prod
+// });
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 
-const typeDefs = gql`
-  type Driver {
-    driver: String
-    f1constructor: String
-    pointsCumulative: [Int]
-  }
-
-  type Comment {
-    comment: String
-    id: String
-  }
-
-  type Query {
-    f1drivers: [Driver]
-    f1driver(driver: String!): Driver
-    f1comments: [Comment]
-  }
-
-  type Mutation {
-    addf1comment(comment: String!): Comment
-    deletef1comment(id:String!): Comment
-  }
-`;
-
-
-const resolvers = {
+module.exports = {
   Query: {
     //retreive all drivers
     f1drivers: async () => {
@@ -44,7 +20,7 @@ const resolvers = {
         let params = {
           TableName: "DEMO_F1DriversStandings",
         };
-        await docClient.scan(params, (err, data) => {
+        await docClient.scan(params, (err: any, data: any) => {
           if (err) {
             console.error("Unable to retreive Drivers:", JSON.stringify(data,null,2));
           } else {
@@ -58,7 +34,7 @@ const resolvers = {
     },
 
     //retreive a single driver given driver name
-    f1driver: async (parent, args) => {
+    f1driver: async (parent: any, args: any) => {
       let driverData = new Promise(async (resolve,reject) => {
         let params = {
           TableName: "DEMO_F1DriversStandings",
@@ -66,7 +42,7 @@ const resolvers = {
             "driver": args.driver
           }
         };
-        await docClient.get(params, (err, data) => {
+        await docClient.get(params, (err: any, data: any) => {
           if (err) {
             console.error("Unable to retreive Driver:", JSON.stringify(err,null,2));
           } else {
@@ -85,7 +61,7 @@ const resolvers = {
         let params = {
           TableName: "DEMO_F1Comments"
         };
-        await docClient.scan(params, (err, data) => {
+        await docClient.scan(params, (err: any, data: any) => {
           if (err) {
             console.error("Unable to retreive Comments:", JSON.stringify(err,null,2));
           } else {
@@ -98,8 +74,10 @@ const resolvers = {
       return commentsData;
     }
   },
+
+  
   Mutation: {
-    addf1comment: async (parent,args) => {
+    addf1comment: async (parent: any, args: any) => {
       let newDate = new Date();
       console.log(newDate)
       let params = {
@@ -109,7 +87,7 @@ const resolvers = {
           "id": newDate.toString()
         }
       };
-      docClient.put(params, (err, data) => {
+      docClient.put(params, (err: any, data: any) => {
         if (err) {
           console.error("Unable to add item", JSON.stringify(err,null,2));
         } else {
@@ -119,14 +97,14 @@ const resolvers = {
     },
 
 
-    deletef1comment: async (parent, args) => {
+    deletef1comment: async (parent: any, args: any) => {
       let updateParams = {
         TableName: "DEMO_F1Comments",
         Key: {
           "id": args.id
         }
       };
-      docClient.delete(updateParams, (err, data) => {
+      docClient.delete(updateParams, (err: any, data: any) => {
         if (err) {
           console.error("Unable to delete item", JSON.stringify(err,null,2));
         } else {
@@ -137,8 +115,3 @@ const resolvers = {
   }
 };
 
-
-module.exports = {
-  typeDefs: typeDefs,
-  resolvers: resolvers
-};
