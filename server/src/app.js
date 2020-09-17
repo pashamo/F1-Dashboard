@@ -6,7 +6,7 @@ const { ApolloServer } = require('apollo-server-fastify');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 
-module.exports = async (fastify: any, opts: any) => {
+module.exports = async (fastify, opts) => {
   // Place here your custom code!
   const server = new ApolloServer({
     typeDefs,

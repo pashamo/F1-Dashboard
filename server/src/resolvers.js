@@ -1,4 +1,4 @@
-import AWS from 'aws-sdk';
+const AWS = require('aws-sdk');
 const configDDB = require('./config');
 
 configDDB();
@@ -20,7 +20,7 @@ module.exports = {
         let params = {
           TableName: "DEMO_F1DriversStandings",
         };
-        await docClient.scan(params, (err: any, data: any) => {
+        await docClient.scan(params, (err, data) => {
           if (err) {
             console.error("Unable to retreive Drivers:", JSON.stringify(data,null,2));
           } else {
@@ -34,7 +34,7 @@ module.exports = {
     },
 
     //retreive a single driver given driver name
-    f1driver: async (parent: any, args: any) => {
+    f1driver: async (parent, args) => {
       let driverData = new Promise(async (resolve,reject) => {
         let params = {
           TableName: "DEMO_F1DriversStandings",
@@ -42,7 +42,7 @@ module.exports = {
             "driver": args.driver
           }
         };
-        await docClient.get(params, (err: any, data: any) => {
+        await docClient.get(params, (err, data) => {
           if (err) {
             console.error("Unable to retreive Driver:", JSON.stringify(err,null,2));
           } else {
@@ -61,7 +61,7 @@ module.exports = {
         let params = {
           TableName: "DEMO_F1Comments"
         };
-        await docClient.scan(params, (err: any, data: any) => {
+        await docClient.scan(params, (err, data) => {
           if (err) {
             console.error("Unable to retreive Comments:", JSON.stringify(err,null,2));
           } else {
@@ -77,7 +77,7 @@ module.exports = {
 
   
   Mutation: {
-    addf1comment: async (parent: any, args: any) => {
+    addf1comment: async (parent, args) => {
       let newDate = new Date();
       console.log(newDate)
       let params = {
@@ -87,7 +87,7 @@ module.exports = {
           "id": newDate.toString()
         }
       };
-      docClient.put(params, (err: any, data: any) => {
+      docClient.put(params, (err, data) => {
         if (err) {
           console.error("Unable to add item", JSON.stringify(err,null,2));
         } else {
@@ -97,14 +97,14 @@ module.exports = {
     },
 
 
-    deletef1comment: async (parent: any, args: any) => {
+    deletef1comment: async (parent, args) => {
       let updateParams = {
         TableName: "DEMO_F1Comments",
         Key: {
           "id": args.id
         }
       };
-      docClient.delete(updateParams, (err: any, data: any) => {
+      docClient.delete(updateParams, (err, data) => {
         if (err) {
           console.error("Unable to delete item", JSON.stringify(err,null,2));
         } else {
