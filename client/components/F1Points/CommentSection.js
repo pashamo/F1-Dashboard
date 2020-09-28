@@ -1,7 +1,9 @@
 import { useQuery } from 'urql';
 import { useState , useEffect } from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-import styles from '../styles/CommentSection.module.css';
+
+import styles from '../../styles/CommentSection.module.css';
 
 import AddComment from './AddComment';
 import DeleteComment from './DeleteComment';
@@ -26,7 +28,14 @@ const CommentSection = (props) => {
   
   //Deconstructing query result for data
   const {data, fetching, error} = queryResult;
-  if (fetching) {return <p>Loading...</p>;} 
+  if (fetching) {
+    return(
+      <div>
+        <CircularProgress color="secondary" />
+      </div>
+    ); 
+    //<p>Loading...</p>;
+  } 
   if (error) {return <p>Errored!</p>;}
   console.table(data.f1comments);
   console.table(localComments);

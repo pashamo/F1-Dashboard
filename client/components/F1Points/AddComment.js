@@ -3,7 +3,7 @@ import { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-import styles from '../styles/CommentSection.module.css';
+import styles from '../../styles/CommentSection.module.css';
 
 const addCommentMutation = `
   mutation ($comment: String!) {
