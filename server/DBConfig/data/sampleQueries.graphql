@@ -1,0 +1,46 @@
+# Write your query or mutation here
+query Driver {
+  f1driver(driver: "Pierre Gasly") {
+    driver
+    f1constructor
+    pointsCumulative
+    totalPoints
+  }
+}
+
+query SomeDriver {
+  f1driverfilter(f1constructor: ["Ferrari","Racing Point"]) {
+    driver
+    f1constructor
+    totalPoints
+  }
+}
+
+query AllDrivers {
+  f1drivers {
+    driver
+    f1constructor
+    totalPoints
+  }
+}
+
+query AllComments {
+  f1comments {
+    comment
+    id
+  }
+}
+
+mutation addcomment {
+  addf1comment(comment: "DEMO DEMO DEMO DEMO Day") {
+    comment
+    id
+  }
+}
+
+mutation deletecomment {
+  deletef1comment(id: "Tue Sep 08 2020 18:46:00 GMT-0400 (Eastern Daylight Time)") {
+    comment
+    id
+  }
+}

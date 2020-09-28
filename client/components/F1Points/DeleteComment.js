@@ -1,7 +1,7 @@
 import { useMutation } from 'urql';
 import Link from '@material-ui/core/Link';
 
-import styles from '../styles/CommentSection.module.css';
+import styles from '../../styles/CommentSection.module.css';
 
 const deleteCommentMutation = `
   mutation ($id: String!) {

@@ -44,7 +44,8 @@ standings.map(standing => {
       "f1constructor": standing.f1constructor,
       "position": standing.position,
       "points": standing.points,
-      "pointsCumulative": standing.pointsCumulative
+      "pointsCumulative": standing.pointsCumulative,
+      "totalPoints": standing.totalPoints
     }
   }
 

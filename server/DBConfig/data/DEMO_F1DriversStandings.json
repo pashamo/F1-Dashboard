@@ -12,7 +12,8 @@
       25,
       25,
       7,
-      26
+      26,
+      15
     ],
     "pointsCumulative": [
       12,
@@ -23,8 +24,10 @@
       132,
       157,
       164,
-      190
-    ]
+      190,
+      205
+    ],
+    "totalPoints": 205
   },
   {
     "driver": "Valtteri Bottas",
@@ -39,7 +42,8 @@
       16,
       18,
       10,
-      18
+      18,
+      26
     ],
     "pointsCumulative": [
       25,
@@ -50,8 +54,10 @@
       89,
       107,
       117,
-      135
-    ]
+      135,
+      161
+    ],
+    "totalPoints": 161
   },
   {
     "driver": "Max Verstappen",
@@ -66,7 +72,8 @@
       18,
       15,
       0,
-      0
+      0,
+      18
     ],
     "pointsCumulative": [
       0,
@@ -77,12 +84,14 @@
       95,
       110,
       110,
-      110
-    ]
+      110,
+      128
+    ],
+    "totalPoints": 128
   },
   {
     "driver": "Alex Albon",
-    "f1constructor": "Reb Bull",
+    "f1constructor": "Red Bull",
     "position": 0,
     "points": [
       0,
@@ -93,7 +102,8 @@
       4,
       8,
       0,
-      15
+      15,
+      1
     ],
     "pointsCumulative": [
       0,
@@ -104,8 +114,10 @@
       40,
       48,
       48,
-      63
-    ]
+      63,
+      64
+    ],
+    "totalPoints": 64
   },
   {
     "driver": "Sebastian Vettel",
@@ -120,7 +132,8 @@
       6,
       0,
       0,
-      1
+      1,
+      0
     ],
     "pointsCumulative": [
       1,
@@ -131,8 +144,10 @@
       16,
       16,
       16,
+      17,
       17
-    ]
+    ],
+    "totalPoints": 17
   },
   {
     "driver": "Charles Leclerc",
@@ -147,7 +162,8 @@
       0,
       0,
       0,
-      4
+      4,
+      8
     ],
     "pointsCumulative": [
       18,
@@ -158,8 +174,10 @@
       45,
       45,
       45,
-      49
-    ]
+      49,
+      57
+    ],
+    "totalPoints": 57
   },
   {
     "driver": "Carlos Sainz",
@@ -174,6 +192,7 @@
       8,
       0,
       18,
+      0,
       0
     ],
     "pointsCumulative": [
@@ -185,8 +204,10 @@
       23,
       23,
       41,
+      41,
       41
-    ]
+    ],
+    "totalPoints": 41
   },
   {
     "driver": "Lando Norris",
@@ -201,7 +222,8 @@
       1,
       6,
       12,
-      8
+      8,
+      0
     ],
     "pointsCumulative": [
       16,
@@ -212,8 +234,10 @@
       39,
       45,
       57,
+      65,
       65
-    ]
+    ],
+    "totalPoints": 65
   },
   {
     "driver": "Daniel Ricciardo",
@@ -228,7 +252,8 @@
       0,
       13,
       8,
-      12
+      12,
+      10
     ],
     "pointsCumulative": [
       0,
@@ -239,8 +264,10 @@
       20,
       33,
       41,
-      53
-    ]
+      53,
+      63
+    ],
+    "totalPoints": 63
   },
   {
     "driver": "Esteban Ocon",
@@ -255,7 +282,8 @@
       0,
       10,
       4,
-      0
+      0,
+      6
     ],
     "pointsCumulative": [
       4,
@@ -266,8 +294,10 @@
       16,
       26,
       30,
-      30
-    ]
+      30,
+      36
+    ],
+    "totalPoints": 36
   },
   {
     "driver": "Sergio Perez",
@@ -282,7 +312,8 @@
       10,
       1,
       1,
-      10
+      10,
+      12
     ],
     "pointsCumulative": [
       8,
@@ -293,8 +324,10 @@
       32,
       33,
       34,
-      44
-    ]
+      44,
+      56
+    ],
+    "totalPoints": 56
   },
   {
     "driver": "Lance Stroll",
@@ -309,6 +342,7 @@
       12,
       2,
       15,
+      0,
       0
     ],
     "pointsCumulative": [
@@ -320,8 +354,10 @@
       40,
       42,
       57,
+      57,
       57
-    ]
+    ],
+    "totalPoints": 57
   },
   {
     "driver": "Romain Grosjean",
@@ -336,6 +372,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "pointsCumulative": [
@@ -347,8 +384,10 @@
       0,
       0,
       0,
+      0,
       0
-    ]
+    ],
+    "totalPoints": 0
   },
   {
     "driver": "Kevin Magnussen",
@@ -363,6 +402,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "pointsCumulative": [
@@ -374,8 +414,10 @@
       1,
       1,
       1,
+      1,
       1
-    ]
+    ],
+    "totalPoints": 1
   },
   {
     "driver": "Kimi Raikkonen",
@@ -390,7 +432,8 @@
       0,
       0,
       0,
-      2
+      2,
+      0
     ],
     "pointsCumulative": [
       0,
@@ -401,8 +444,10 @@
       0,
       0,
       0,
+      2,
       2
-    ]
+    ],
+    "totalPoints": 2
   },
   {
     "driver": "Antonio Giovinazzi",
@@ -417,6 +462,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "pointsCumulative": [
@@ -428,8 +474,10 @@
       2,
       2,
       2,
+      2,
       2
-    ]
+    ],
+    "totalPoints": 2
   },
   {
     "driver": "Pierre Gasly",
@@ -444,7 +492,8 @@
       2,
       4,
       25,
-      0
+      0,
+      2
     ],
     "pointsCumulative": [
       6,
@@ -455,8 +504,10 @@
       14,
       18,
       43,
-      43
-    ]
+      43,
+      45
+    ],
+    "totalPoints": 45
   },
   {
     "driver": "Daniil Kvyat",
@@ -471,7 +522,8 @@
       0,
       0,
       2,
-      6
+      6,
+      4
     ],
     "pointsCumulative": [
       0,
@@ -482,8 +534,10 @@
       2,
       2,
       4,
-      10
-    ]
+      10,
+      14
+    ],
+    "totalPoints": 14
   },
   {
     "driver": "George Russell",
@@ -498,6 +552,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "pointsCumulative": [
@@ -509,8 +564,10 @@
       0,
       0,
       0,
+      0,
       0
-    ]
+    ],
+    "totalPoints": 0
   },
   {
     "driver": "Nicholas Latifi",
@@ -525,6 +582,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "pointsCumulative": [
@@ -536,7 +594,9 @@
       0,
       0,
       0,
+      0,
       0
-    ]
+    ],
+    "totalPoints": 0
   }
 ]

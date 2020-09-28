@@ -2,8 +2,9 @@ import React, { useState , useEffect} from "react";
 import { useQuery } from "urql";
 import dynamic from 'next/dynamic'
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
 const Chart = dynamic(() => import('react-apexcharts'), {ssr:false})
-import styles from '../styles/ApexChartTest.module.css';
+import styles from '../../styles/DriverPointsChart.module.css';
 
 
 const driversQuery = `
@@ -15,8 +16,7 @@ const driversQuery = `
   }
 `;
 
-
-const ApexChartTest = (props) => {
+const DriverPointsChart = (props) => {
   const [options, setOptions] = useState({
     chart: {
       width: "100%",
@@ -54,7 +54,14 @@ const ApexChartTest = (props) => {
   });
 
   const {data, fetching, error} = result;
-  if (fetching) {return <p>Loading...</p>;}
+  if (fetching) {
+    return(
+      <div>
+        <CircularProgress color="secondary" />
+      </div>
+    ); 
+    //<p>Loading...</p>;
+  }
   if (error) {return <p>Errored!</p>;}
   console.table(data.f1drivers);
   console.table(series);
@@ -115,4 +122,4 @@ const ApexChartTest = (props) => {
   );
 }
 
-export default ApexChartTest;
+export default DriverPointsChart;
