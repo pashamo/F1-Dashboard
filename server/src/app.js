@@ -1,20 +1,33 @@
-'use strict'
-
-const path = require('path')
-const AutoLoad = require('fastify-autoload')
+const fastify = require('fastify');
 const { ApolloServer } = require('apollo-server-fastify');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 
-module.exports = async (fastify, opts) => {
-  // Place here your custom code!
-  const server = new ApolloServer({
-    typeDefs,
-    resolvers
+const server = new ApolloServer({
+  typeDefs,
+  resolvers
+});
+
+const init = () => {
+  const app = fastify();
+  app.register(server.createHandler());
+  app.register(require('fastify-cors'));
+  app.get('/', (request, reply)  => {
+    reply.send(`Welcome to the Apollo GraphQL Server wrapped in Fastify\nplease go to /graphql to play around with the API`);
   });
-  const start = async () => {
-    fastify.register(server.createHandler());
-    await fastify.listen(4000);
-  };
-  start();
+  return app;
+}
+
+if (require.main === module) {
+  //This condition allows to run server locally 
+  //eg. node src/fastify_app
+  init().listen(4000, err => {
+    if (err) {
+      console.error(err);
+    }
+    console.log('Listening on port 4000');
+  })
+} else {
+  //This condition exports the fastify app for lambda purpose
+  module.exports = init;
 }
