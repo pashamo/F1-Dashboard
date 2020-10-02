@@ -1,14 +1,7 @@
-const AWS = require('aws-sdk');
+import AWS = require('aws-sdk');
 const configDDB = require('./config');
 
 configDDB();
-
-// AWS.config.update({
-//   accessKeyId: configDDB.accessKeyId,
-//   secretAccessKey: configDDB.secretAccessKey,
-//   region: configDDB.region,
-//   endpoint: configDDB.endpoint_prod
-// });
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 const NEW_COMMENT = "NEW_COMMENT";
@@ -16,11 +9,14 @@ const NEW_COMMENT = "NEW_COMMENT";
 module.exports = {
   Subscription: {
     newComment: {
-      subscribe: (_, __, {pubsub}) => pubsub.asyncIterator(NEW_COMMENT)
+      subscribe: (_: any, __: any, {pubsub}: any) => pubsub.asyncIterator(NEW_COMMENT)
     }
   },
 
   Query: {
+    //Return GraphQL Service name
+    service: () => "hello from F1-Dashboard",
+
     //retreive all drivers
     f1drivers: async () => {
       let driversData = new Promise(async (resolve, reject) =>  {
@@ -40,11 +36,11 @@ module.exports = {
       return await driversData;
     },
 
-    f1driverfilter: async (parent,args) => {
+    f1driverfilter: async (parent: any, args: any) => {
       let filterexpression = "";
       let exprattvals = {};
 
-      args.f1constructor.map(team => {
+      args.f1constructor.map((team: any) => {
         let tempKey = ":"+team.replace(/\s/g, ''); 
         console.log(tempKey);
         exprattvals = {
@@ -79,7 +75,7 @@ module.exports = {
     },
 
     //retreive a single driver given driver name
-    f1driver: async (parent, args) => {
+    f1driver: async (parent: any, args: any) => {
       let driverData = new Promise(async (resolve,reject) => {
         let params = {
           TableName: "DEMO_F1DriversStandings",
@@ -122,7 +118,7 @@ module.exports = {
 
   
   Mutation: {
-    addf1comment: async (parent, args, {pubsub}) => {
+    addf1comment: async (parent: any, args: any, {pubsub}: any) => {
       let newDate = new Date();
       console.log(newDate)
       let params = {
@@ -150,7 +146,7 @@ module.exports = {
     },
 
 
-    deletef1comment: async (parent, args) => {
+    deletef1comment: async (parent: any, args: any) => {
       let updateParams = {
         TableName: "DEMO_F1Comments",
         Key: {

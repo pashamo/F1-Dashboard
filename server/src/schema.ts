@@ -14,6 +14,7 @@ module.exports = gql`
   }
 
   type Query {
+    service: String!
     f1drivers: [Driver!]
     f1driverfilter(f1constructor: [String!]): [Driver!]
     f1driver(driver: String!): Driver!
