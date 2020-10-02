@@ -23,63 +23,17 @@ const init = () => {
   return app;
 }
 
-const test = async () => {
-  const testApp = init();
-  let results: any = [];
-  let queries = [
-    `{
-      service
-    }`,
-    `{
-      f1drivers {
-        driver
-        f1constructor
-        totalPoints
-      }
-    }`,
-    `{
-      f1comments {
-        id
-        comment
-      }
-    }`
-  ];  
-
-  await queries.map(async (query,index) => {
-    let testResult = await testApp.inject({
-      method: 'POST',
-      url: '/graphql',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        query: query
-      })
-    });
-  
-    let data = testResult.payload;
-
-    results.push(data);
-    console.log(index);
-    console.log(data);
-
-  });
-
-  
-}
-
 
 if (require.main === module) {
   //This condition allows to run server locally 
   //eg. node src/fastify_app
-  // init().listen(PORT, (err: any) => {
-  //   if (err) {
-  //     console.error(err);
-  //   }
-  //   console.log(`Listening on port ${PORT}`);
-  // })
+  init().listen(PORT, (err: any) => {
+    if (err) {
+      console.error(err);
+    }
+    console.log(`Listening on port ${PORT}`);
+  })
 
-  test();
 } else {
   //This condition exports the fastify app for lambda purpose
   module.exports = init;

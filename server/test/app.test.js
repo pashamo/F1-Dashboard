@@ -27,7 +27,81 @@ describe('Fastify Service', function() {
   });
 
   describe('injecting POST on /graphql', function() {
-    it('responds with success and data on /graphql', async function() {
+    it('query service: responds with success and data on /graphql', async function() {
+      
+      let query = `{
+        service
+      }`;
+      
+      let testResult = await testApp.inject({
+        method: 'POST',
+        url: '/graphql',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: query
+        })
+      });
+
+      assert.equal(testResult.statusCode,200);
+      assert.typeOf(testResult.payload, 'string');
+      
+      let expectedPL = 
+      {
+        "data": {
+          "service": "hello from F1-Dashboard"
+        }
+      };
+
+      assert.equal(
+        JSON.stringify(
+          JSON.parse(testResult.payload),
+          null,
+          2
+        ),
+        JSON.stringify(expectedPL,null,2)
+      );
+    });
+
+    it('query all drivers: responds with success and data on /graphql', async function() {
+      
+      let query = `{
+        service
+      }`;
+      
+      let testResult = await testApp.inject({
+        method: 'POST',
+        url: '/graphql',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: query
+        })
+      });
+
+      assert.equal(testResult.statusCode,200);
+      assert.typeOf(testResult.payload, 'string');
+      
+      let expectedPL = 
+      {
+        "data": {
+          "service": "hello from search"
+        }
+      };
+
+      assert.equal(
+        JSON.stringify(
+          JSON.parse(testResult.payload),
+          null,
+          2
+        ),
+        JSON.stringify(expectedPL,null,2)
+      );
+    });
+
+    it('query all comments: responds with success and data on /graphql', async function() {
       
       let query = `{
         service
